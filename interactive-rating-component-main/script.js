@@ -26,9 +26,10 @@ buttons.forEach((button) =>
   })
 );
 
+let html;
+
 const renderEl = () => {
-  console.log(clickedButton);
-  const html = `
+  html = `
   <img src="/images/illustration-thank-you.svg" alt="thank you icon">
   You selected ${clickedButton} out of 5
  </p> 
@@ -38,15 +39,14 @@ const renderEl = () => {
   We appreciate you taking the time to give a rating. If you ever need more support,
   don't hesitate to get in touch!
 </p>`;
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    ratingStart.classList.add("hidden");
-    ratingEnd.classList.remove("hidden");
-
-    ratingEnd.insertAdjacentHTML("afterbegin", html);
-  });
 };
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  ratingStart.classList.add("hidden");
+  ratingEnd.classList.remove("hidden");
+  ratingEnd.insertAdjacentHTML("afterbegin", html);
+});
 
 // ${clickedButton.value}
 // console.log(clickedButton);
