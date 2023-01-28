@@ -181,6 +181,12 @@ form {
 .star {
   align-self: flex-start;
   margin-left: clamp(1.8rem, 30px, 2.2rem);
+  background-color: var(--Very-Dark-Blue);
+  width: 38px;
+  height: 38px;
+  border-radius: 20px;
+  display: grid;
+  place-content: center;
 }
 .hidden {
   display: none;
